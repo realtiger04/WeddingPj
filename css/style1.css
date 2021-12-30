@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR:wght@300;700&family=Unna&display=swap");
+
+/* 전체영역에서 여백을 없애줌 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*reset*/
+*{margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {text-decoration: inherit; color: inherit;}
+li {list-style: none;}
+img {vertical-align: middle;}
+a img {border: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* z-index는 값이 높은게 제일 위에 나오도록 함 비쥬얼 영역보다 높게 나오도록 100설정 */
+header {width: 100%;  padding: 0 0px; box-sizing: border-box; height: 100px; line-height: 100px; ; background: #eee;
+  color: rgb(10, 10, 10); z-index: 100; position: fixed; top:0; }
+
+/* ul li태그에 리스트 스타일을 없앰 */
+ul li{
+  list-style: none;
+}
+/* a태그에 텍스트 밑줄을 없애고 색상을 #333 */
+a {
+  text-decoration: none;
+  color:#333;
+}
+/* 글자크기를 16px 맑은 고딕 굵게하고 width넓이 700, 높이 50만큼 배경색은 #ccc, 글자색은 검정색, 라인높이50px
+menu박스 가운데정렬, 글자가운데 정렬 */
+#menu {
+  font:bold 16px "malgun gothic";
+  width:700px;
+  height:50px;
+  background: rgb(236, 207, 198);
+  color:black;
+  line-height: 50px; 
+  margin:0 auto;
+  text-align: center;
+}
+
+/* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
+#menu > ul > li {
+  float:left;
+  width:140px;
+  position:relative;
+}
+  #menu > ul > li > ul {
+		width:130px;
+		display:none;
+		position: absolute;
+		font-size:14px;
+		background: rgb(243, 223, 223);
+	}
+  #menu > ul > li:hover > ul {
+		display:block;
+	}
+  #menu > ul > li > ul > li:hover {
+		background:rgb(223, 180, 169);
+		transition: ease 1s;
+		}
+body{
+ margin:0;
+ font-family: 'Source Sans Pro';
+}
+a {
+ text-decoration: none;
+ color : black;
+ 
+}
+
+
+.navbar{
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #eee;
+ padding: 8px 12px;
+}
+
+.navbar__logo{
+ font-size: 24px;
+ color: black;
+}
+
+.navbar__logo i{
+ color :tan
+}
+
+.navbar__menu {
+ display:flex;
+ list-style: none;
+ padding-left: 0;
+}
+
+.navbar__menu li{
+ padding: 8px 12px;
+}
+.navbar__menu li:hover{
+ background-color: white;
+ border-radius: 4px;
+}
+.navbar__icons{
+ list-style: none;
+ color:tan;
+ display:flex;
+ padding-left: 0;
+}
+
+.navbar__icons li{
+ padding: 8px 12px;
+}
+.section{
+ width:100%;
+}
+.Mainimg{
+ width:100%;
+ object-fit: contain;
+
+}
+.navbar__toogleBtn{
+ display:none;
+ position: absolute;
+ right: 32px;
+ font-size: 24px;
+ color:violet
+}
+
+.layout{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.qna{
+  list-style: none;
+  margin: 0;
+  padding-top: 130px;
+}
+.qna > li{
+padding: 10px 0;
+box-sizing: border-box;
+}
+.qna > li:nth-child(n+2){ /* 아이템 구분 점선 */
+border-top: 1px dashed #aaa;
+}
+.qna input {
+display: none;
+}
+
+.qna label { /* 제목 - 클릭 영역 */
+font-weight: bold;
+color: #000;
+margin: 20px 0 0;
+cursor: pointer;
+}
+.qna label::before { /* 제목 앞 화살표 */
+display: block;
+content: "";
+width: 0;
+height: 0;
+border: 8px solid transparent;
+border-left: 8px solid #a00;
+margin: 2px 0 0 8px;
+float: left;
+}
+.qna input:checked + label::before { /* 내용 펼침 상태 제목 앞 화살표 */
+border: 8px solid transparent;
+border-top: 8px solid #a00;
+border-bottom: 0;
+margin: 8px 4px 0;
+}
+
+.qna div { /* 내용 영역 - 기본 감춤 상태 */
+display: none;
+color: #666;
+font-size: 0.9375em;
+overflow: hidden;
+padding: 10px 0 10px 30px;
+box-sizing: border-box;
+transition: max-height 0.4s;
+}
+.qna input:checked + label + div { /* 내용 영역 펼침 */
+display: block;
+}
+
+
+
+@media screen and (max-width:768px){
+ .navbar{
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 24px;
+ }
+ .navbar__menu{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+ }
+
+ .navbar__menu li{
+  width: 100%;
+  text-align: center;
+ }
+ .navbar__icons{
+  display:none;
+  justify-content: center;
+  width: 100%;
+ }
+ .navbar__toogleBtn{
+  display: block;
+ }
+ .navbar__menu.active,
+ .navbar__icons.active{
+  display: flex;
+ }
+}
+/* visual */
+.visual li img{position: absolute; right:0; top:0; width: 100%; z-index: -100;}

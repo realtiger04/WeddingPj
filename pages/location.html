@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+ <title>Projectreal</title>
+<script src="../jsfile/main.js" defer></script>
+
+ 
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+     <div class="navbar__logo">
+      <i class="fab fa-gratipay"></i>
+      <a href="">Wedding</a>
+     </div>
+
+     <div id="menu">
+        <ul>
+            <li><a href="../index.html">홈</a> 
+            </li>
+            <li><a href="#">결혼식장 소개</a>
+                <ul>
+                    <li><a href="#">5F 채플홀</a></li>
+                    <li><a href="#">신부대기실</a></li>
+                </ul>
+            </li>
+            <li><a href="#">연회장 메뉴</a>
+                <ul>
+                    <li><a href="#">연회장소개</a></li>
+                    <li><a href="#">연회장메뉴</a></li>         
+                </ul>
+            </li>
+            <li><a href="#">가이드</a>
+                <ul>
+                    <li><a href="#">비용</a></li>
+                    <li><a href="#">결혼식 순서</a></li>
+                </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+                <ul>
+                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+     <ul class="navbar__icons">
+         <li><i class="fab fa-twitter"></i></li>
+         <li><i class="fab fa-facebook"></i></li>
+     </ul>
+     
+     <a href="#" class="navbar__toogleBtn">
+     <i class="fas fa-bars"></i>
+    </a>
+    </nav>
+</header>
+<section class="visual">
+ <div id="daumRoughmapContainer1640233881062" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%"></div>
+
+ <!--
+  2. 설치 스크립트
+  * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+ -->
+ <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+ 
+ <!-- 3. 실행 스크립트 -->
+ <script charset="UTF-8">
+  new daum.roughmap.Lander({
+   "timestamp" : "1640233881062",
+   "key" : "28j3a",
+   
+   "mapHeight" : "500"
+  }).render(); 
+ </script>
+</section>
+</body>
+</html>
